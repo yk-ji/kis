@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import RealmSwift
 //
 //
 //extension NetworkService: URLSessionDelegate{
@@ -22,6 +23,7 @@ var global_approvalKey : String?
 
 class NetworkService {
     var cancellationToken: AnyCancellable?
+    
     
     //MARK: - KIS HTTP APIs
     func requestApprovalKey(onCompleted: @escaping (KisWebSocketModel) -> Void) {
@@ -65,6 +67,10 @@ class NetworkService {
                                         , totalAskpRsqn: entity.totalAskpRsqn().value
                                         , totalBidpRsqn : entity.totalBidpRsqn().value)
 //            RTExcutionModel(mkscShrnIscd: entity.mkscShrnIscd, stckPrpr: Int(entity.stckPrpr)!)
+            
+            
+          
+            
             onMessage(model)
         })
     }

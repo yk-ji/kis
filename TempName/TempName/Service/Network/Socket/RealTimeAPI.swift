@@ -78,24 +78,24 @@ extension RealTimeAPI {
                 print("============= aes256Decode Step 미구현 =============")
 //                 aes256Decode function 을 사용해 key, iv, 암호화데이터를 넘겨 decode를 한다
                 // 체결완료통보 복호화 해야됨
-                                   var decodedata = aes256Decode (encryptkey, iv, bodydata);
-               
-                                   if (trid == "K0STCNI0" || trid == "K0STCNI9" ||trid == "H0STCNI0" || trid == "H0STCNI9")    // 주식체결통보, 모의투자체결통보 step
-                                   {
-                                       var i=0;
-                                       var objectlist="고 객 I D        ,계 좌 번 호      ,주 문 번 호      ,원주문 번 호     ,매도매수 구분    ,정 정 구 분      ,주 문 종 류      ,주 문 조 건      ,주식단축종목코드 ,체 결 수 량      ,체 결 단 가      ,주식체결 시간    ,거 부 여 부      ,체 결 여 부      ,접 수 여 부      ,지 점 번 호      ,계  좌  명       ,주 문 수 량      ,주 문 가 격      ,체결  종목명     ,신 용 구 분      ,신용 대출일자    ,체결종목명40     ";
-                                       var arrObject = objectlist.split(',');    // 메뉴리스트를 ','으로 잘라서 array 에 할당 한다.
-                                       var strResult = decodedata.split('^');    // result data 의 구분자가 '^'이므로 해당 값으로 split 한다.
-                                       document.getElementById("output1").innerHTML = ("");    // output1 screen clear
-                                       console.log(strResult[4]);
-                                       log1(strResult[4],"");
-                                       log1(strResult[4],"");
-                                       log1(strResult[4],"====================================");
-                                       for (i=0;i<strResult.length;i++)
-                                       {
-                                           log1(strResult[4],arrObject[i]+"["+strResult[i]+"]");
-                                       }
-                                   }
+//                                   var decodedata = aes256Decode (encryptkey, iv, bodydata);
+//               
+//                                   if (trid == "K0STCNI0" || trid == "K0STCNI9" ||trid == "H0STCNI0" || trid == "H0STCNI9")    // 주식체결통보, 모의투자체결통보 step
+//                                   {
+//                                       var i=0;
+//                                       var objectlist="고 객 I D        ,계 좌 번 호      ,주 문 번 호      ,원주문 번 호     ,매도매수 구분    ,정 정 구 분      ,주 문 종 류      ,주 문 조 건      ,주식단축종목코드 ,체 결 수 량      ,체 결 단 가      ,주식체결 시간    ,거 부 여 부      ,체 결 여 부      ,접 수 여 부      ,지 점 번 호      ,계  좌  명       ,주 문 수 량      ,주 문 가 격      ,체결  종목명     ,신 용 구 분      ,신용 대출일자    ,체결종목명40     ";
+//                                       var arrObject = objectlist.split(',');    // 메뉴리스트를 ','으로 잘라서 array 에 할당 한다.
+//                                       var strResult = decodedata.split('^');    // result data 의 구분자가 '^'이므로 해당 값으로 split 한다.
+//                                       document.getElementById("output1").innerHTML = ("");    // output1 screen clear
+//                                       console.log(strResult[4]);
+//                                       log1(strResult[4],"");
+//                                       log1(strResult[4],"");
+//                                       log1(strResult[4],"====================================");
+//                                       for (i=0;i<strResult.length;i++)
+//                                       {
+//                                           log1(strResult[4],arrObject[i]+"["+strResult[i]+"]");
+//                                       }
+//                                   }
                 
             }else if strArray[0] == "0" { // 암호화 미처리 step
                 if trid == "H0STASP0" { // 주식호가
