@@ -24,33 +24,6 @@ class KisViewModel : ViewModelable {
     init(){
         state = .initialize
         action(.getApprovalKey)
-        
-        // Prepare to handle exceptions.
-        let username = "GordonCole2"
-        var config = Realm.Configuration(schemaVersion: 4)
-        config.fileURL!.deleteLastPathComponent()
-        config.fileURL!.appendPathComponent(username)
-        config.fileURL!.appendPathExtension("realm")
-        let realm = try! Realm(configuration: config)
-        
-        print(config.fileURL)
-        
-        do {
-            let test = ExcutionPrice()
-            test.stckPrpr = 0.0
-            
-            print(realm.objects(ExcutionPrice.self).count)
-            // Open a thread-safe transaction.
-            try realm.write {
-                
-//                test.id = ObjectId()
-                realm.add(test)
-                
-//                test.stckPrpr = 0.3
-            }
-        } catch let error as NSError {
-            print(error.description)
-        }
     }
     
     // MARK: States

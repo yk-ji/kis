@@ -10,7 +10,6 @@
 		F21A926C2A38382000D6DEA3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A926B2A38382000D6DEA3 /* RealmService.swift */; };
 		F21A926F2A3839AF00D6DEA3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F21A926E2A3839AF00D6DEA3 /* Realm */; };
 		F21A92712A3839AF00D6DEA3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F21A92702A3839AF00D6DEA3 /* RealmSwift */; };
-		F21A92732A383A4B00D6DEA3 /* RealmModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A92722A383A4B00D6DEA3 /* RealmModelable.swift */; };
 		F21A92752A383C0800D6DEA3 /* ExcutionPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21A92742A383C0800D6DEA3 /* ExcutionPrice.swift */; };
 		F25D124029629F9400F344C0 /* TempNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D123F29629F9400F344C0 /* TempNameApp.swift */; };
 		F25D124229629F9400F344C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D124129629F9400F344C0 /* ContentView.swift */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		F21A926B2A38382000D6DEA3 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
-		F21A92722A383A4B00D6DEA3 /* RealmModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModelable.swift; sourceTree = "<group>"; };
 		F21A92742A383C0800D6DEA3 /* ExcutionPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcutionPrice.swift; sourceTree = "<group>"; };
 		F25D123C29629F9400F344C0 /* TempName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25D123F29629F9400F344C0 /* TempNameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNameApp.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 		F25D124D2962A0EB00F344C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F21A92722A383A4B00D6DEA3 /* RealmModelable.swift */,
 				F21A92742A383C0800D6DEA3 /* ExcutionPrice.swift */,
 				F25D12622962D3A700F344C0 /* SampleModel.swift */,
 			);
@@ -309,7 +306,6 @@
 				F25D12542962A2F500F344C0 /* ContentViewModel.swift in Sources */,
 				F25D127D2966B87900F344C0 /* RealTimeAPI.swift in Sources */,
 				F25D12522962A24600F344C0 /* ViewModelable.swift in Sources */,
-				F21A92732A383A4B00D6DEA3 /* RealmModelable.swift in Sources */,
 				F25D12712963F98300F344C0 /* SocketClient.swift in Sources */,
 				F21A926C2A38382000D6DEA3 /* RealmService.swift in Sources */,
 				F25D125F2962C14200F344C0 /* GlobalProperties.swift in Sources */,
@@ -448,6 +444,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TempName/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "테스트";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +475,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TempName/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "테스트";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

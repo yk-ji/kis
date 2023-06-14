@@ -12,17 +12,18 @@ import RealmSwift
 
 class RealmService {
     
-    
-    
-    init() {
-        let username = "GordonCole2"
+    static func getTodayRelamConfig() -> Realm.Configuration{
+        let today = Date()
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "YYYYMMdd"
+        let todayStr = dateformat.string(from: today)
+        
         var config = Realm.Configuration(schemaVersion: 4)
         config.fileURL!.deleteLastPathComponent()
-        config.fileURL!.appendPathComponent(username)
+        config.fileURL!.appendPathComponent(todayStr)
         config.fileURL!.appendPathExtension("realm")
-        let realm = try! Realm(configuration: config)
-        print(config.fileURL)
-        
-    
+        print(config.fileURL!)
+        return config
     }
+    
 }
